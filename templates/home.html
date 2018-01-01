@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<title>Magic Taomato</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.w3-content {width:1000px;}
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card-2" style="letter-spacing:4px;">
+    <!-- <a href="#home" class="w3-bar-item w3-button">Magic Taomato @ Homepage</a> -->
+    <a href="#home" class="w3-bar-item w3-button" style="letter-spacing:3px;">
+        <b><i>The wind of dark matter blows!</i></b>
+    </a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Research</a>
+      <a href="#teaching" class="w3-bar-item w3-button">Teaching</a>
+      <a href="#about" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1000px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+
+    <div class="w3-col m6 w3-padding-large">
+    </br></br>
+<!--      <img src="w3images/Self3.jpeg" class="w3-round w3-image" alt="TaoSelfie" width="420" height="665">
+     {{ url_for('static',filename="test3.jpg")}} -->
+     <img src="{{url_for('static',filename='Self3.jpeg')}}" class="w3-round w3-image" alt="TaoSelfie" width="420" height="665">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Tao Ren</h1>
+      <p class="w3-large w3-justify">
+        Hi! I am a fourth year physics Ph.D. student in <a href="http://theory.ucr.edu" target="_blank">UCR particle theory group</a> working with Prof. Hai-Bo Yu at University of California, Riverside. After getting my B.S. degree in Applied Physics on metamaterial, I switched my research interests to the mystery of dark matter and focus on the nature and related aspects of <b>Self-Interacting Dark Matter</b>. I prefer to work in an interdisciplinary area for new ideas and questions. Not only tackle the central problems but have a better understanding of each subject--one stone many birds.
+      </p>
+      <p class="w3-large w3-justify">In short, I used to be a condensed matter guy, then went to the particle theory group, began to study astrophysics ... lol
+      </p>
+      <h4 class="w3-text-blue w3-huge">Contact</h4>
+      <p class="w3-text-blue w3-large">Email: tao.ren AT email.ucr.edu</p>
+      <p class="w3-large w3-text-light-green">For more information, please refer to my <a href="docu/CV_TaoRen.pdf" target="_blank">CV</a>.</p>
+    </div>
+
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Research</h1>
+      <p class="w3-large w3-justify">
+        Self-interacting dark matter (SIDM) was originally proposed with the purpose to solve small scale issues, which trouble the current prevailing lambda cold dark matter (&Lambda;CDM) paradigm a lot. It departs from the original CDM model only in the inner region of galaxies due to the self-interactions between dark matter particles with a light mediator. Because of this, my studies of macroscopic astrophysical systems like spiral and elliptical galaxies, may offer key information of microscopic dark matter particles. Once the self-interactions are confirmed, it would rule out many popular dark matter candidates like axions or neutralinos.
+      </p>
+      <p class="w3-large w3-justify">
+        Since the Earth is following the rotation of Milky Way stellar disk and moving rapidly through the dark halo&mdash;a sea of dark matter particles, it is in principle possible to find signals from the "weak" interactions between dark matter particles and nuclei or electrons through mediators. If the mediator is much light than the dark matter particle, the event spectra is peaked towards low recoil energies different from WIMPs case. If the self-interaction is strong enough, dark matter bound states are probably to form in high energy colliders. This again offers new directions to seach. I am exploring the possibility of resolving these features in current and future experiments.
+      </p>
+      <p class="w3-large w3-justify">
+        Besides what mentioned above, I am also interested in introducing new technology like machine learning to my research, due to the data driven feature for building and testing theories.
+      </p> 
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <br>
+      <p class="w3-large w3-justify w3-center w3-text-blue">
+        More detailed version for non-specialist <a href="docu/Research.pdf" target="_blank">(pdf)</a>
+      </p>
+      <img src="{{url_for('static',filename='research_mind_map.pdf')}}" class="w3-round w3-image" alt="research" width="500" height="750">
+      <br><br>
+      <div class="w3-row">
+        <div class="w3-col l6 w3-padding-small">
+        <img src="{{url_for('static',filename='NASA_wing.jpg')}}" class="w3-round w3-image" alt="sprial galaxy" width="600" height="450">
+        </div>
+        <div class="w3-col l6 w3-padding-small">
+        <br>
+        <img src="{{url_for('static',filename='pandax.jpg')}}" class="w3-round w3-image" alt="sprial galaxy" width="250" height="300">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="w3-row">
+        <div class="w3-col l6 w3-padding-small">
+        <br>
+        <img src="{{url_for('static',filename='AI_demo.jpg')}}" class="w3-round w3-image" alt="sprial galaxy" width="300" height="300">
+        </div>
+        <div class="w3-col l6 w3-padding-small">
+        <img src="{{url_for('static',filename='feynman_blackboard.jpg')}}" class="w3-round w3-image" alt="sprial galaxy" width="200" height="450">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding" id="menu">
+    <div class="w3-col m8 l12 w3-padding-large">
+      <h3 class="w3-center">Publication</h3>
+      <p class="w3-justify">Anna Kwa, Tao Ren, Manoj Kaplinghat, Hai-Bo Yu, <i>“Self-interacting Dark Matter and the ‘Diversity Problem’ in Galactic Rotation Curves”</i> (in&nbsp;preparation)</p>
+      <p class="w3-justify">Jigang Hu, Tao Ren, Guanjun Wang, Weiqing Gao, Junxue Chen, Feng Gao, Hai Ming, <i>"Terminal interface effect in metal-dielectric multilayer"</i>, Proc. SPIE 9047, 2013 International Conference on Optical Instruments and Technology, doi: 10.1117/12.2037815</p>
+    </div>
+  </div>
+
+
+  <hr>
+
+  <!-- Teaching Section -->
+  <div class="w3-row w3-padding-64" id="teaching">
+
+    <div class="w3-container w3-center w3-padding-large">
+      <h1>Teaching</h1>
+      <p>Work as a Teaching Assistant at University of California, Riverside</p>
+
+      <table class="w3-table w3-centered w3-bordered w3-padding">
+        <tr>
+          <th>Quarter</th>
+          <th>Class</th>
+          <th>Instructor</th>
+        </tr>
+        <tr>
+          <td>2017 Fall</td>
+          <td>Introduction to Physics 41A (Mechanics)</td>
+          <td>Prof. Richard Seto</td>
+        </tr>
+        <tr>
+          <td>2017 Spring</td>
+          <td>Introduction to Physics 41C (Optics and Quantum Mechanics)</td>
+          <td>Prof. Kirill Shtengel/Owen Long</td>
+        </tr>
+        <tr>
+          <td>2017 Winter</td>
+          <td>Introduction to Physics 41B (Thermodynamics and Electromagnetism)</td>
+          <td>Prof. Harry Tom</td>
+        </tr>
+        <tr>
+          <td>2016 Fall</td>
+          <td>Introduction to Physics 41A (Mechanics)</td>
+          <td>Prof. Richard Seto</td>
+        </tr>
+        <tr>
+          <td>2016 Summer</td>
+          <td>General Physics Discussion 002A</td>
+          <td>Prof. Ward Beyermann</td>
+        </tr>
+        <tr>
+          <td>2016 Spring</td>
+          <td>General Physics Discussion 002A</td>
+          <td>Prof. Robert Clare</td>
+        </tr>
+        <tr>
+          <td>2016 Winter</td>
+          <td>General Physics Laboratory 02LC</td>
+          <td>Prof. Jory Yarmoff</td>
+        </tr>
+        <tr>
+          <td>2015 Fall</td>
+          <td>General Physics Laboratory 02LA</td>
+          <td>Prof. Allen Mills</td>
+        </tr>
+        <tr>
+          <td>2015 Spring</td>
+          <td>General Physics Laboratory 02LC</td>
+          <td>Prof. Jory Yarmoff</td>
+        </tr>
+        <tr>
+          <td>2015 Winter</td>
+          <td>General Physics Laboratory 02LB</td>
+          <td>Prof. Jory Yarmoff</td>
+        </tr>
+        <tr>
+          <td>2014 Fall</td>
+          <td>General Physics Laboratory 02LA</td>
+          <td>Prof. Jory Yarmoff</td>
+        </tr>
+      </table>
+      <h4>Student Comments</h4>
+      <p class="w3-justify">
+        &sdot; YOU DA BOMB!!
+      </p>
+      <p class="w3-justify">
+        &sdot; WE LOVE YOU TAO! You helped Physics 41A become an easier class!
+      </p>
+      <p class="w3-justify">
+        &sdot; Great energy! made the lab very fun. made sure that we always had our questions 
+      answered and was willing to teach if you did not understand a certain concept. great examples to teach as well. Thanks Tao for graduating me from Physics 2Lab series!Cheers. thanks for everything.
+      </p>
+      <p class="w3-justify">
+        &sdot; Going to Tao's office hours helped me understand the concepts. Even though, I may not be the smartest student Tao demonstrates a great dedication to work with me on my difficulties. Meaning that he does not take weaknesses as a defeat, but as something to improve on. Also, the presentation on General Relativity was quite fascinating! Overall, Tao was an extremely helpful and encouraging tutor.
+      </p>
+      <br>
+      <br>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+<!--   <div class="w3-container w3-padding-64" id="contact">
+
+
+  </div> -->
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Copyright &copy; 2017 Tao Ren &sdot; Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+  </p>
+</footer>
+
+</body>
+
+</html>
